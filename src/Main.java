@@ -18,5 +18,10 @@ public class Main {
                 new Edge(6,7,3)
         };
         Graph g = new Graph(nodes,edges);
+        Edge[] minimumExpansionTree = KruskalAlgorithm.Kruskal(g,g.getEdgeList());
+        for (Edge e :
+                minimumExpansionTree) {
+            System.out.println(e);
+        }
     }
 }
