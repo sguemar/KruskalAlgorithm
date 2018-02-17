@@ -14,8 +14,8 @@ public class KruskalAlgorithm {
                 selectedEdgeSet[selectedEdgeSetPos] = edges[edgesPos];
                 selectedEdgeSetPos++;
             }
-            edgesPos++;
-        } while (selectedEdgeSetPos < n - 1);
+            if(++edgesPos >= edges.length) return null;
+        } while (selectedEdgeSetPos <= n);
         return selectedEdgeSet;
     }
 
