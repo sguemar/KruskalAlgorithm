@@ -19,6 +19,7 @@ public class Main {
             new Edge(6,7,3)
         };
         Graph connectedGraph = new Graph(nodes,edgesConnectedGraph);
+        connectedGraph.printGraph("ConnectedGraph");
 
         nodes = 5;
         Edge[] edgesDenseGraph = {
@@ -34,6 +35,7 @@ public class Main {
             new Edge(4,5,2),
         };
         Graph connectedDenseGraph = new Graph(nodes,edgesDenseGraph);
+        connectedDenseGraph.printGraph("ConnectedDenseGraph");
 
         nodes = 5;
         Edge[] edgesUnconnectedGraph = {
@@ -45,17 +47,37 @@ public class Main {
                 new Edge(3,5,4),
         };
         Graph unConnectedGraph = new Graph(nodes,edgesUnconnectedGraph);
+        unConnectedGraph.printGraph("UnconnectedGraph");
 
-//        Edge[] minimumExpansionTree = KruskalAlgorithm.Kruskal(g,g.getEdgeList());
-//        if (minimumExpansionTree == null){
-//            System.out.println("Invalid Graph: Unconnected");
-//
-//        }else{
-//            for (Edge e :
-//                    minimumExpansionTree) {
-//                System.out.println(e);
-//            }
-//        }
+        nodes = 5;
+        Edge[] edgesConnectedGraphWithClicles = {
+                new Edge(1,2,1),
+                new Edge(1,1,4),
+                new Edge(1,3,4),
+                new Edge(1,4,6),
+                new Edge(1,5,2),
+                new Edge(2,3,1),
+                new Edge(2,4,4),
+                new Edge(2,5,6),
+                new Edge(2,2,1),
+                new Edge(3,4,1),
+                new Edge(3,3,4),
+                new Edge(3,5,4),
+                new Edge(4,5,2),
+                new Edge(4,4,1)
+        };
+        Graph connectedGraphWithCicles = new Graph(nodes,edgesConnectedGraphWithClicles);
+        connectedGraphWithCicles.printGraph("ConnectedGraphWithCicles");
 
+        nodes = 1;
+        Edge[] edgesOneNodeGraph = {
+                new Edge(1,1,1),
+        };
+        Graph oneEdgeGraph=new Graph(nodes,edgesOneNodeGraph);
+        oneEdgeGraph.printGraph("OneEdgeGraph");
+
+        nodes = 1;
+        Graph noEdgesGraph=new Graph(nodes,null);
+        noEdgesGraph.printGraph("NoEdgesGraph");
     }
 }
