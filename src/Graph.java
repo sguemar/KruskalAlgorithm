@@ -17,7 +17,7 @@ public class Graph {
     }
 
     public void printGraph(String graphType){
-        if (this.edgeList == null) System.out.println("\nInvalidTree (\" + graphType + \"): No Edges");
+        if (this.edgeList == null) System.out.println("\nInvalidTree (" + graphType + "): No Edges");
         else {
             Edge[] edgesConnectedGraphMinimumExpansionTree = KruskalAlgorithm.Kruskal(this, this.getEdgeList());
             if (edgesConnectedGraphMinimumExpansionTree == null) {
